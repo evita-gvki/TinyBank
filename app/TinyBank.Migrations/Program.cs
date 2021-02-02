@@ -53,8 +53,6 @@ namespace TinyBank.Migrations
             using (var dbContext = new CrmDbContext(optionsBuilder.Options))
             {
 
-
-
                 var customer = new Customer()
                 {
                     Name = "Petros",
@@ -117,6 +115,7 @@ namespace TinyBank.Migrations
                 //var results = customers.Where(c => c.Name == "Petros");
 
                 dbContext.Add(customer);
+                dbContext.Add(customer2);
                 dbContext.SaveChanges();
 
             }
