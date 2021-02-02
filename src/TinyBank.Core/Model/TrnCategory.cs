@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TinyBank.Core
+namespace TinyBank.Core.Model
 {
-    public enum CustomerCategory
+    public enum TrnCategory
     {
-        FusikoProswpo,
-        NomikoProswpo
+        Xrewsh,
+        Pistwsh
     }
 }

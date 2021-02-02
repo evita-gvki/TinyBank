@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TinyBank.Core
+namespace TinyBank.Core.Services.Extentions
 {
-    public enum TrnCategory
+    class ServiceCollectionExtensions
     {
-        Xrewsh,
-        Pistwsh
     }
 }

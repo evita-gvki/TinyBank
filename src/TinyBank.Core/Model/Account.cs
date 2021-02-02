@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TinyBank.Core
+namespace TinyBank.Core.Model
 {
     public class Account
     {

@@ -3,7 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace TinyBank.Core
+namespace TinyBank.Core.Model
 {
     class Program
     {

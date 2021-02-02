@@ -3,27 +3,32 @@ using System.Collections.Generic;
 using System.Text;
 
 using Microsoft.EntityFrameworkCore;
+using TinyBank.Core.Model;
 
 using Microsoft.EntityFrameworkCore.Design;
 
-namespace TinyBank.Core
+namespace TinyBank.Core.Data
 {
     public class CrmDbContext : DbContext
     {
-        const string connectionString =
+        //const string connectionString =
 
-           "Server=localhost;Database=crmdb2;User Id=sa;Password=admin!@#123;";
+        //   "Server=localhost;Database=crmdb2;User Id=sa;Password=admin!@#123;";
 
-        public CrmDbContext()
+        //public CrmDbContext(
+        //   DbContextOptions<CrmDbContext> options) : base(options)
+        // { }
 
+        public CrmDbContext(
+          DbContextOptions options) : base(options)
         { }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlServer(connectionString);
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    base.OnConfiguring(optionsBuilder);
+        //    optionsBuilder.UseSqlServer(connectionString);
 
-        }
+        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
