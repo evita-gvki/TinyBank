@@ -8,6 +8,7 @@ namespace TinyBank.Core.Model
 {
     public enum TrnCategory
     {
+        Undefined,
         Xrewsh,
         Pistwsh
     }

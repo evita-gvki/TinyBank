@@ -50,7 +50,7 @@ namespace TinyBank.Core.Data
             modelBuilder.Entity<Transaction>()
                 .ToTable("Transactions");
 
-                    }
+        }
     }
 }
 

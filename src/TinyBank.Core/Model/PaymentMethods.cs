@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace TinyBank.Core.Model
 {
-    public enum CustomerCategory
+    public enum PaymentMethods
     {
         Undefined,
-        FusikoProswpo,
-        NomikoProswpo
+        Cash,
+        Card,
+        BankTransfer
     }
 }
+                                      

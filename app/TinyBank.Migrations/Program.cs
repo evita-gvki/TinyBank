@@ -52,71 +52,76 @@ namespace TinyBank.Migrations
 
             using (var dbContext = new CrmDbContext(optionsBuilder.Options))
             {
-
+                var customers = new List<Customer>();
                 var customer = new Customer()
                 {
-                    Name = "Petros",
-                    Surname = "Petropoulos",
-                    VatNumber = "333333333",
+                    Name = "Pavloss",
+                    Surname = "Pavlouu",
+                    VatNumber = "888888888",
                     Category = CustomerCategory.FusikoProswpo
 
                 };
                 var customer2 = new Customer()
                 {
-                    Name = "Petros",
-                    Surname = "Petrou",
-                    VatNumber = "444444444",
+                    Name = "Pavloss",
+                    Surname = "Pavlopouloss",
+                    VatNumber = "777777777",
                     Category = CustomerCategory.FusikoProswpo
 
                 };
 
-                var account = new Account()
-                {
-                    AccountId = "2121212121"
+                //var account = new Account()
+                //{
+                //    AccountId = "2252525252"
 
-                };
+                //};
 
-                customer.Accounts.Add(account);
+                //customer.Accounts.Add(account);
 
-                var account2 = new Account()
-                {
-                    AccountId = "2222222222"
+                //var account2 = new Account()
+                //{
+                //    AccountId = "2626262626"
 
-                };
+                //};
 
-                customer2.Accounts.Add(account2);
+                //customer2.Accounts.Add(account2);
 
-                var transaction = new Transaction()
-                {
-                    TrnAmount = 200,
-                    Category = TrnCategory.Xrewsh
+                //var transaction = new Transaction()
+                //{
+                //    TrnAmount = 200,
+                //    Category = TrnCategory.Xrewsh
 
-                };
+                //};
 
-                account.AddTrn(transaction);
+                //account.AddTrn(transaction);
 
-                var trn2 = new Transaction()
-                {
-                    TrnAmount = 1500,
-                    Category = TrnCategory.Pistwsh
-                };
-                account.AddTrn(trn2);
+                //var trn2 = new Transaction()
+                //{
+                //    TrnAmount = 1500,
+                //    Category = TrnCategory.Pistwsh
+                //};
+                //account.AddTrn(trn2);
 
-                var trn3 = new Transaction()
-                {
-                    TrnAmount = 1000,
-                    Category = TrnCategory.Pistwsh
-                };
-                account2.AddTrn(trn3);
+                //var trn3 = new Transaction()
+                //{
+                //    TrnAmount = 1000,
+                //    Category = TrnCategory.Pistwsh
+                //};
+                //account2.AddTrn(trn3);
 
-                //customer.Add(customer);
-                //customer.Add(customer2);
+                customers.Add(customer);
+                customers.Add(customer2);
 
                 //var results = customers.Where(c => c.Name == "Petros");
 
-                dbContext.Add(customer);
-                dbContext.Add(customer2);
-                dbContext.SaveChanges();
+                //dbContext.Add(customer);
+                //dbContext.Add(customer2);
+                //dbContext.SaveChanges();
+
+                var results = dbContext.Set<Customer>()
+                    .Where(c => c.Name == "Pavloss")
+                    .ToList();
+
 
             }
         }

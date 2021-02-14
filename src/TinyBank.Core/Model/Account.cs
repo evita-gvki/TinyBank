@@ -23,7 +23,7 @@ namespace TinyBank.Core.Model
         {
             Transactions.Add(trn);
             if (TrnCategory.Pistwsh.Equals(trn.Category)) { TotalAmount += trn.TrnAmount; }
-             else { TotalAmount -= trn.TrnAmount; }
+             else if (TrnCategory.Xrewsh.Equals(trn.Category)) { TotalAmount -= trn.TrnAmount; }
          //   TotalAmount -= trn.TrnAmount;
 
         }

@@ -11,6 +11,7 @@ namespace TinyBank.Core.Model
     public string Surname { get; set; }
     public string VatNumber { get; set; }
     public CustomerCategory Category{ get; set; }
+    public PaymentMethods PaymentMethod { get; set; }
 
     public List<Account> Accounts { get; set; }
 
